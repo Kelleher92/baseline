@@ -12,19 +12,19 @@
 			$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 			try {
 			    //Server settings
-			    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+			    $mail->SMTPDebug = false;                             // Enable verbose debug output
 			    $mail->isSMTP();                                      // Set mailer to use SMTP
-			    $mail->Host = '';  					  				  // Specify main server
+			    $mail->Host = 'smtp.sendgrid.net';  				  // Specify main server
 				$mail->SMTPAuth = true;                               // Enable SMTP authentication
-			    $mail->Username = '';                				  // username
-			    $mail->Password = '';                     			  // password
+			    $mail->Username = 'apikey';                			  // Username
+			    $mail->Password = getenv('SG_PASS');                  // Password   			 
 			    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 			    $mail->Port = 587;                                    // TCP port to connect to
 
 			    //Recipients
-			    $mail->setFrom('', 'Mailer');
+			    $mail->setFrom('iankelleher92@gmail.com', 'Mailer');
 			    $mail->addAddress($email);              
-			    $mail->addReplyTo('', 'Information');
+			    $mail->addReplyTo('iankelleher92@gmail.com', 'Information');
 			   
 			    //Content
 			    $mail->isHTML(true);                                  // Set email format to HTML
@@ -44,19 +44,19 @@
 			$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 			try {
 			    //Server settings
-			    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+			    $mail->SMTPDebug = false;                             // Enable verbose debug output
 			    $mail->isSMTP();                                      // Set mailer to use SMTP
-			    $mail->Host = '';  					  				  // Specify main server
+			    $mail->Host = 'smtp.sendgrid.net';  				  // Specify main server
 				$mail->SMTPAuth = true;                               // Enable SMTP authentication
-			    $mail->Username = '';                				  // username
-			    $mail->Password = '';                     			  // password
+			    $mail->Username = 'apikey';                			  // Username
+			    $mail->Password = getenv('SG_PASS');                  // Password   			  
 			    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 			    $mail->Port = 587;                                    // TCP port to connect to
 
 			    //Recipients
-			    $mail->setFrom('', 'Mailer');
+			    $mail->setFrom('iankelleher92@gmail.com', 'Mailer');
 			    $mail->addAddress($email);              
-			    $mail->addReplyTo('', 'Information');
+			    $mail->addReplyTo('iankelleher92@gmail.com', 'Information');
 			   
 			    //Content
 			    $mail->isHTML(true);                                  // Set email format to HTML
