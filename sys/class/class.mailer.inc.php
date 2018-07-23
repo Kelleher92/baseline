@@ -12,16 +12,12 @@
 			    //Server settings
 			    $mail->SMTPDebug = false;                             // Disable verbose debug output
 			    $mail->isSMTP();                                      // Set mailer to use SMTP
-			    $mail->Host = 'smtp.gmail.com';   		 		  // Specify main server
-			    // $mail->Host = getenv('EMAIL_HOST');   		 		  // Specify main server
+			    $mail->Host = getenv('EMAIL_HOST');   		 		  // Specify main server
 			    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-			    $mail->Username = 'iankelleher92@gmail.com';              // Username
-			    // $mail->Username = getenv('EMAIL_UNAME');              // Username
-			    $mail->Password = 'Rellehek25';               // Password    			 
-			    // $mail->Password = getenv('EMAIL_PASS');               // Password    			 
+			    $mail->Username = getenv('EMAIL_UNAME');              // Username
+			    $mail->Password = getenv('EMAIL_PASS');               // Password    			 
 			    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-			    $mail->Port = '465';                   // TCP port to connect to
-			    // $mail->Port = getenv('EMAIL_PORT');                   // TCP port to connect to
+			    $mail->Port = getenv('EMAIL_PORT');                   // TCP port to connect to
 			    //Recipients
 			    $mail->setFrom('iankelleher92@gmail.com', 'Mailer');
 			    $mail->addAddress($email);              
@@ -44,16 +40,12 @@
 			    //Server settings
 			    $mail->SMTPDebug = false;                             // Disable verbose debug output
 			    $mail->isSMTP();                                      // Set mailer to use SMTP
-			    $mail->Host = 'smtp.gmail.com';   		 		  // Specify main server
-			    // $mail->Host = getenv('EMAIL_HOST');   		 		  // Specify main server
+			    $mail->Host = getenv('EMAIL_HOST');   		 		  // Specify main server
 			    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-			    $mail->Username = 'iankelleher92@gmail.com';              // Username
-			    // $mail->Username = getenv('EMAIL_UNAME');              // Username
-			    $mail->Password = 'Rellehek25';               // Password    			 
-			    // $mail->Password = getenv('EMAIL_PASS');               // Password    			 
+			    $mail->Username = getenv('EMAIL_UNAME');              // Username
+			    $mail->Password = getenv('EMAIL_PASS');               // Password    			 
 			    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-			    $mail->Port = '465';                   // TCP port to connect to
-			    // $mail->Port = getenv('EMAIL_PORT');                   // TCP port to connect to
+			    $mail->Port = getenv('EMAIL_PORT');                   // TCP port to connect to
 			    //Recipients
 			    $mail->setFrom('iankelleher92@gmail.com', 'Mailer');
 			    $mail->addAddress($email);              
